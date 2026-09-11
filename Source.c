@@ -34,6 +34,7 @@ int read_points(const char* filename, Point** points, int* N, int* N_max) {
 
 	if (!feof(file)) {
 		printf("Error: incorrect data in line %d\n", *N);
+		fclose(file);
 		return 1;
 	}
 	fclose(file);
